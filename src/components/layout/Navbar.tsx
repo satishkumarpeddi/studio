@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <Droplets className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">Aqua Index Analyzer</span>
+          <span className="font-bold text-lg">Heavy Metal Pollution Indices</span>
         </Link>
         {/* Future navigation links can be added here */}
       </div>
