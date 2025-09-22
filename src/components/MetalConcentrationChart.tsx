@@ -1,7 +1,7 @@
 'use client';
 
 import type { Metal } from '@/lib/types';
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import {
   Card,
   CardContent,
@@ -41,7 +41,6 @@ export function MetalConcentrationChart({ metals }: MetalConcentrationChartProps
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="min-h-[250px] w-full">
-            <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={chartData} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="name" tickLine={false} axisLine={false} tickMargin={8} />
@@ -52,7 +51,6 @@ export function MetalConcentrationChart({ metals }: MetalConcentrationChartProps
                     />
                     <Bar dataKey="concentration" fill="var(--color-concentration)" radius={4} />
                 </BarChart>
-            </ResponsiveContainer>
         </ChartContainer>
       </CardContent>
     </Card>
